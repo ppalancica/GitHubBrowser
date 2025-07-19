@@ -28,7 +28,7 @@ final class CustomButton: UIButton {
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 10
-        titleLabel?.textColor = .white
+        setTitleColor(.white, for: .normal) // Unnecessary when using .white (because it is the default)
         titleLabel?.font = .preferredFont(forTextStyle: .headline)
     }
 }

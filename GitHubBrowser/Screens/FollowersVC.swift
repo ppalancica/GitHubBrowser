@@ -24,7 +24,7 @@ final class FollowersVC: UIViewController {
         NetworkManager.shared.getFollowers(for: username, page: 1) { followers, errorMessage in
             guard let followers else {
                 self.presentCustomAlertOnMainThread(title: "Something Went Wrong",
-                                                    message: errorMessage ?? "Try again",
+                                                    message: errorMessage?.rawValue ?? "Try again",
                                                     buttonTitle: "OK")
                 return
             }
