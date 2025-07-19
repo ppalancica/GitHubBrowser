@@ -23,3 +23,7 @@ Double click on that and if it's in Support you need to enter a slash before /In
 For example it should read: [ProjectName]/Support/Info.plist
 
 Click on Editor in the menu and click Validate Settings. After that command-B and everything should build fine.
+
+https://developer.apple.com/documentation/swift/managing-a-shared-resource-using-a-singleton
+
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes

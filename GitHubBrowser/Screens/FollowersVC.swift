@@ -16,6 +16,22 @@ final class FollowersVC: UIViewController {
         
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        guard let username else {
+            fatalError("'username' was not injected into FollowersVC")
+        }
+        
+        NetworkManager.shared.getFollowers(for: username, page: 1) { followers, errorMessage in
+            guard let followers else {
+                self.presentCustomAlertOnMainThread(title: "Something Went Wrong",
+                                                    message: errorMessage ?? "Try again",
+                                                    buttonTitle: "OK")
+                return
+            }
+            
+            print("followers.count = ", followers.count)
+            print(followers)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
