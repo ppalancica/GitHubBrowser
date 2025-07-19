@@ -17,15 +17,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        configureGlobalAppearances()
+        
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = makeTabBarController()
         window?.makeKeyAndVisible()
     }
     
+    private func configureGlobalAppearances() {
+        UITabBar.appearance().tintColor = .systemGreen
+        UINavigationBar.appearance().tintColor = .systemGreen
+    }
+    
     private func makeTabBarController() -> UITabBarController {
-        UITabBar.appearance().tintColor = .systemBlue
-        
         let tabBar = UITabBarController()
         tabBar.viewControllers = [makeSearchNC(), makeFavoritesNC()]
         
