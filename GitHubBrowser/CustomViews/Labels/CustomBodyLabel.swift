@@ -1,5 +1,5 @@
 //
-//  AlertBodyLabel.swift
+//  CustomBodyLabel.swift
 //  GitHubBrowser
 //
 //  Created by Pavel Palancica  on 19.07.2025.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AlertBodyLabel: UILabel {
+final class CustomBodyLabel: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -11,7 +11,7 @@ final class CustomAlertVC: UIViewController {
     
     private let containerView = UIView()
     private let titleLabel = CustomTitleLabel(textAlignment: .center, fontSize: 20)
-    private let messageLabel = AlertBodyLabel(textAlignment: .center)
+    private let messageLabel = CustomBodyLabel(textAlignment: .center)
     private let actionButton = CustomButton(backgroundColor: .systemPink, title: "Ok")
     
     private var alertTitle: String?

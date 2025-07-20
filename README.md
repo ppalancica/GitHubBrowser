@@ -35,3 +35,6 @@ https://developer.apple.com/videos/play/wwdc2019/220/
 https://developer.apple.com/documentation/swift/hashable
 
 https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html
+
+Here is the Github link that shows all the users with 0 followers: https://github.com/search?q=followers%3A%3C%3D0&type=users)
+https://docs.github.com/en/search-github/searching-on-github/searching-users
