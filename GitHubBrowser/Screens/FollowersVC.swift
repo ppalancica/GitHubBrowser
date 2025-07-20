@@ -9,7 +9,7 @@ import UIKit
 
 final class FollowersVC: UIViewController {
     
-    enum Section {
+    private enum Section {
         case main
     }
     
