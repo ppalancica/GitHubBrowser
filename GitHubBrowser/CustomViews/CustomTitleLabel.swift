@@ -1,5 +1,5 @@
 //
-//  AlertTitleLabel.swift
+//  CustomTitleLabel.swift
 //  GitHubBrowser
 //
 //  Created by Pavel Palancica  on 19.07.2025.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AlertTitleLabel: UILabel {
+final class CustomTitleLabel: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,9 +18,10 @@ final class AlertTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
+    init(textAlignment: NSTextAlignment, fontSize: CGFloat, numberOfLines: Int = 1) {
         super.init(frame: .zero)
         self.textAlignment = textAlignment
+        self.numberOfLines = numberOfLines
         font = .systemFont(ofSize: fontSize, weight: .bold)
         configure()
     }

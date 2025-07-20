@@ -27,3 +27,9 @@ Click on Editor in the menu and click Validate Settings. After that command-B an
 https://developer.apple.com/documentation/swift/managing-a-shared-resource-using-a-singleton
 
 https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
+https://developer.apple.com/documentation/uikit/uitableviewcell/contentview
+
+https://developer.apple.com/videos/play/wwdc2019/220/
+
+https://developer.apple.com/documentation/swift/hashable

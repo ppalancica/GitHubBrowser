@@ -10,13 +10,13 @@ import UIKit
 final class CustomAlertVC: UIViewController {
     
     private let containerView = UIView()
-    private let titleLabel = AlertTitleLabel(textAlignment: .center, fontSize: 20)
+    private let titleLabel = CustomTitleLabel(textAlignment: .center, fontSize: 20)
     private let messageLabel = AlertBodyLabel(textAlignment: .center)
     private let actionButton = CustomButton(backgroundColor: .systemPink, title: "Ok")
     
-    var alertTitle: String?
-    var message: String?
-    var buttonTitle: String?
+    private var alertTitle: String?
+    private var message: String?
+    private var buttonTitle: String?
     
     private let padding: CGFloat = 20
     
@@ -41,7 +41,7 @@ final class CustomAlertVC: UIViewController {
         configureMessageLabel()
     }
     
-    func configureContainerView() {
+    private func configureContainerView() {
         view.addSubview(containerView)
         containerView.backgroundColor = .systemBackground
         containerView.layer.cornerRadius = 16
@@ -57,7 +57,7 @@ final class CustomAlertVC: UIViewController {
         ])
     }
     
-    func configureTitleLabel() {
+    private func configureTitleLabel() {
         containerView.addSubview(titleLabel)
         titleLabel.text = alertTitle ?? "Something went wrong"
         
@@ -69,7 +69,7 @@ final class CustomAlertVC: UIViewController {
         ])
     }
     
-    func configureActionButton() {
+    private func configureActionButton() {
         containerView.addSubview(actionButton)
         actionButton.setTitle(buttonTitle ?? "Ok", for: .normal)
         actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
@@ -82,7 +82,7 @@ final class CustomAlertVC: UIViewController {
         ])
     }
     
-    func configureMessageLabel() {
+    private func configureMessageLabel() {
         containerView.addSubview(messageLabel)
         messageLabel.text = message ?? "Unable to complete request"
         messageLabel.numberOfLines = 4
@@ -95,7 +95,7 @@ final class CustomAlertVC: UIViewController {
         ])
     }
     
-    @objc func dismissVC() {
+    @objc private func dismissVC() {
         dismiss(animated: true)
     }
 }
