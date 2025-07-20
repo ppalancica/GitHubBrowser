@@ -33,3 +33,5 @@ https://developer.apple.com/documentation/uikit/uitableviewcell/contentview
 https://developer.apple.com/videos/play/wwdc2019/220/
 
 https://developer.apple.com/documentation/swift/hashable
+
+https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html
