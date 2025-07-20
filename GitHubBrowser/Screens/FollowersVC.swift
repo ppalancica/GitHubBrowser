@@ -21,16 +21,15 @@ final class FollowersVC: UIViewController {
             fatalError("'username' was not injected into FollowersVC")
         }
         
-        NetworkManager.shared.getFollowers(for: username, page: 1) { followers, errorMessage in
-            guard let followers else {
+        NetworkManager.shared.getFollowers(for: username, page: 1) { result in
+            switch result {
+            case .success(let followers):
+                print(followers)
+            case .failure(let error):
                 self.presentCustomAlertOnMainThread(title: "Something Went Wrong",
-                                                    message: errorMessage?.rawValue ?? "Try again",
+                                                    message: error.rawValue,
                                                     buttonTitle: "OK")
-                return
             }
-            
-            print("followers.count = ", followers.count)
-            print(followers)
         }
     }
     
